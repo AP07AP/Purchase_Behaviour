@@ -13,7 +13,7 @@ with open(filename, 'rb') as f:
 df = pd.read_csv("customer_purchase_with_clusters.csv")
 
 # Set up the Streamlit page appearance
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
 st.markdown('<style>body{background-color: #ADD8E6;}</style>', unsafe_allow_html=True)
 st.title("Customer Purchase Behavior Prediction")
 
