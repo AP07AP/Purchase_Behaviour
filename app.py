@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+# import seaborn as sns
+# import matplotlib.pyplot as plt
 import pickle
 
 # Load the trained model (make sure the file path is correct)
@@ -61,10 +61,10 @@ if submitted:
     # Filter the DataFrame for the selected cluster
     cluster_df = df[df['Cluster'] == predicted_cluster]
 
-    # Plot histograms for each feature of the selected cluster
-    plt.rcParams["figure.figsize"] = (20, 3)
-    for feature in cluster_df.drop(['Cluster'], axis=1):
-        fig, ax = plt.subplots()
-        sns.histplot(cluster_df[feature], kde=True, ax=ax)  # Use seaborn for better visuals
-        ax.set_title(f'Distribution of {feature}')
-        st.pyplot(fig)
+    # # Plot histograms for each feature of the selected cluster
+    # plt.rcParams["figure.figsize"] = (20, 3)
+    # for feature in cluster_df.drop(['Cluster'], axis=1):
+    #     fig, ax = plt.subplots()
+    #     sns.histplot(cluster_df[feature], kde=True, ax=ax)  # Use seaborn for better visuals
+    #     ax.set_title(f'Distribution of {feature}')
+    #     st.pyplot(fig)
